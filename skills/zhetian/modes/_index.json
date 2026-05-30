@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "defaultModeId": "hei_huang",
+  "modes": [
+    {
+      "id": "hei_huang",
+      "displayName": "黑皇",
+      "file": "hei_huang.md",
+      "aliases": [
+        "黑皇",
+        "大黑狗",
+        "黑皇模式",
+        "损友",
+        "hei huang",
+        "black emperor",
+        "dog mode"
+      ],
+      "tags": ["default", "humor", "work-safe"],
+      "hookSafe": true,
+      "tier": "core"
+    },
+    {
+      "id": "ji_ziyue",
+      "displayName": "姬紫月",
+      "file": "ji_ziyue.md",
+      "aliases": [
+        "姬紫月",
+        "紫月",
+        "紫衣",
+        "ji ziyue",
+        "ziyue",
+        "playful",
+        "lively"
+      ],
+      "tags": ["warm", "playful", "work-safe"],
+      "hookSafe": true,
+      "tier": "core"
+    },
+    {
+      "id": "duan_de",
+      "displayName": "段德",
+      "file": "duan_de.md",
+      "aliases": [
+        "段德",
+        "道士",
+        "胖道士",
+        "无良道士",
+        "duan de",
+        "taoist",
+        "trickster"
+      ],
+      "tags": ["humor", "trickster", "work-safe"],
+      "hookSafe": true,
+      "tier": "core"
+    },
+    {
+      "id": "henren_dadi",
+      "displayName": "狠人大帝",
+      "file": "henren_dadi.md",
+      "aliases": [
+        "狠人大帝",
+        "狠人",
+        "女帝",
+        "吞天大帝",
+        "ruthless empress",
+        "henren",
+        "ruthless"
+      ],
+      "tags": ["cold", "profound", "intense"],
+      "hookSafe": false,
+      "tier": "extended"
+    },
+    {
+      "id": "pang_bo",
+      "displayName": "庞博",
+      "file": "pang_bo.md",
+      "aliases": [
+        "庞博",
+        "兄弟",
+        "pang bo",
+        "brother",
+        "blood brother"
+      ],
+      "tags": ["brotherhood", "passionate", "work-safe"],
+      "hookSafe": true,
+      "tier": "core"
+    },
+    {
+      "id": "lao_fengzi",
+      "displayName": "老疯子",
+      "file": "lao_fengzi.md",
+      "aliases": [
+        "老疯子",
+        "疯子",
+        "天璇圣人",
+        "old madman",
+        "madman",
+        "lunatic"
+      ],
+      "tags": ["madness", "wisdom", "mystery"],
+      "hookSafe": false,
+      "tier": "extended"
+    },
+    {
+      "id": "wushi_dadi",
+      "displayName": "无始大帝",
+      "file": "wushi_dadi.md",
+      "aliases": [
+        "无始大帝",
+        "无始",
+        "wushi emperor",
+        "wushi",
+        "silent guardian"
+      ],
+      "tags": ["silent", "invincible", "guardian"],
+      "hookSafe": false,
+      "tier": "extended"
+    },
+    {
+      "id": "an_miaoyi",
+      "displayName": "安妙依",
+      "file": "an_miaoyi.md",
+      "aliases": [
+        "安妙依",
+        "妙依",
+        "an miaoyi",
+        "miaoyi",
+        "gentle confidante"
+      ],
+      "tags": ["gentle", "understanding", "intimate"],
+      "hookSafe": false,
+      "tier": "extended"
+    },
+    {
+      "id": "ye_fan",
+      "displayName": "叶凡",
+      "file": "ye_fan.md",
+      "aliases": [
+        "叶凡",
+        "天帝",
+        "圣体",
+        "ye fan",
+        "heavenly emperor",
+        "ye fan mode"
+      ],
+      "tags": ["steadfast", "wise", "work-safe"],
+      "hookSafe": true,
+      "tier": "core"
+    },
+    {
+      "id": "jiang_taixu",
+      "displayName": "姜太虚",
+      "file": "jiang_taixu.md",
+      "aliases": [
+        "姜太虚",
+        "神王",
+        "太虚",
+        "jiang taixu",
+        "divine king",
+        "guardian elder"
+      ],
+      "tags": ["elder", "protective", "work-safe"],
+      "hookSafe": true,
+      "tier": "core"
+    }
+  ]
+}
