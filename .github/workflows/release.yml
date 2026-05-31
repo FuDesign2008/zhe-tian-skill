@@ -7,6 +7,13 @@ on:
       - 'skills/**'
       - 'commands/**'
   workflow_dispatch:
+    inputs:
+      bump-type:
+        description: 'Version bump type (auto = detect from commit message)'
+        required: false
+        default: 'auto'
+        type: choice
+        options: [auto, major, minor, patch]
 
 permissions:
   contents: write
@@ -15,6 +22,8 @@ permissions:
 jobs:
   version-bump:
     runs-on: ubuntu-latest
+    # 防止 version bump commit 再次触发，造成无限循环
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,6 +40,13 @@ jobs:
       - name: Determine version bump
         id: bump-type
         run: |
+          MANUAL_TYPE="${{ github.event.inputs.bump-type }}"
+
+          if [[ -n "$MANUAL_TYPE" && "$MANUAL_TYPE" != "auto" ]]; then
+            echo "type=$MANUAL_TYPE" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
           COMMIT_MSG=$(git log -1 --pretty=%B)
 
           if echo "$COMMIT_MSG" | grep -qi "BREAKING CHANGE"; then
@@ -82,6 +98,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
+          # Keep in sync with the bump sed commands above
           git add package.json skills/zhetian/SKILL.md README.md
           git commit -m "chore: bump version to ${VERSION}"
           git push -u origin "$BRANCH"
