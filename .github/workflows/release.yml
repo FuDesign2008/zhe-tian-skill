@@ -63,7 +63,14 @@ jobs:
 
           echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
 
+          # Bump package.json
           jq --arg v "$NEW_VERSION" '.version = $v' package.json > package.json.tmp && mv package.json.tmp package.json
+
+          # Bump SKILL.md frontmatter version
+          sed -i "s/^version: '.*'/version: '$NEW_VERSION'/" skills/zhetian/SKILL.md
+
+          # Bump README.md version badge
+          sed -i "s|version-[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*-blue|version-$NEW_VERSION-blue|" README.md
 
       - name: Open PR and merge version bump
         env:
@@ -75,7 +82,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
-          git add package.json
+          git add package.json skills/zhetian/SKILL.md README.md
           git commit -m "chore: bump version to ${VERSION}"
           git push -u origin "$BRANCH"
           PR_URL=$(gh pr create --base main --head "$BRANCH" \
