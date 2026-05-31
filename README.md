@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/FuDesign2008/zhe-tian-skill)
-![Version](https://img.shields.io/badge/version-1.0.1-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.0.2-blue?style=flat-square)
 
 > 我为天帝，当镇压世间一切敌。
 

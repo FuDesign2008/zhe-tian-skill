@@ -2,7 +2,7 @@
 
 name: zhetian
 
-version: '1.0.1'
+version: '1.0.2'
 
 user-invocable: true
 
