@@ -14,6 +14,8 @@
 
 <div align="center">
 
+<img src="zhe-tian-skill.gif" alt="demo" width="640" />
+
 「哼，就这点小活儿也值得本皇开口？……行吧，算你有点本事。」—— **黑皇**
 
 「喂～你居然搞定了！我就知道你行的嘛！」—— **姬紫月**
